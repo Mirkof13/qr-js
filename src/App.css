@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.bar {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.bar select,
+.bar button {
+  padding: 6px 12px;
+  background: #1c1c1c;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bar button:hover {
+  background: #2b2b2b;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: #000;
+}
+
+.ar-video,
+.ar-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ar-video {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.ar-canvas {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hint {
+  margin: 0;
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+}
